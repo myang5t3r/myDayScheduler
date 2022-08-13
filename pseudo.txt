@@ -20,10 +20,10 @@ Must be able to click on time block and enter text for event (Done)
 Save button for time-block must save the event to local storage so if you refresh page the items will persist
     - use Jquery to get the text from element in the textareas -  (Done)
     - use Jquery to get button elements (Done)
-    -store items into array
-    -save to local storage 
-        - use set localStorage.setItems / localStorage.getItems
-        -Must be JSON object use JSON.stringify and JSON.parse
+    -store items into array (Done)
+    -save to local storage (Done)
+        - use set localStorage.setItems / localStorage.getItems (Done)
+        -Must be JSON object use JSON.stringify and JSON.parse (Done)
     - after refresh stored items must be put back into correct spots
         - pull from locate storage and put back into correct spot
 

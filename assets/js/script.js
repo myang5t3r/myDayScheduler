@@ -38,6 +38,27 @@ function bgColor(){
     }
 }
 
+// Function to pull event data from local storage to persist from page refresh
+function persist(){
+    if(localStorage.getItem("event")!==null){
+        // get events array from local storage
+        events = JSON.parse(localStorage.getItem("event"));
+        console.log(events)
+        // console.log(events[0].index)
+        // console.log(events[0].event)
+        // Loop through events array 
+        events.forEach(Element => {
+            console.log(Element.index)
+            // set the textarea based on the index
+            txtEl.eq(Element.index).text(Element.event)
+        })
+        // put data back into correct textarea
+        // txtEl.eq(index).
+    }else{
+        return
+    }
+}
+
 ////////////////    Event Handlers      /////////////////////// 
 // For each button add an event handler
 btnEl.each(function(index){
@@ -45,7 +66,7 @@ btnEl.each(function(index){
     $(this).on("click", function(event){
     event.preventDefault();
     // Check to see if we have any data in local storage
-    if(localStorage.getItem("events")===null){
+    if(localStorage.getItem("event")===null){
         // create array to store objects
         var events=[];
         // get the text value inside of textarea
@@ -71,12 +92,8 @@ btnEl.each(function(index){
     })
 })
 
-  
-// console.log(txtEl.eq(0).value)
-
-
-
-////////////////    Execute     ///////////////////////////// 
+////////////////    Function Execute at launch   ///////////////////////////// 
 // Call setInterval method to display the time- call back function!!
 setInterval(time,100)
 bgColor()
+persist()
