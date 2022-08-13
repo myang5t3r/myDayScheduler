@@ -41,18 +41,36 @@ function bgColor(){
 ////////////////    Event Handlers      /////////////////////// 
 // For each button add an event handler
 btnEl.each(function(index){
-    // When you click this save button 
+    // When you click this save button do something
     $(this).on("click", function(event){
     event.preventDefault();
-    // get the text value inside of textarea
-    var str = txtEl.eq(index).val();
-    console.log(str)
-
+    // Check to see if we have any data in local storage
+    if(localStorage.getItem("events")===null){
+        // create array to store objects
+        var events=[];
+        // get the text value inside of textarea
+        var str = txtEl.eq(index).val().trim();
+        // create object of event data and index 
+        eventData = {index:index, event:str};
+        // push eventData to events arrau
+        events.push(eventData);
+        // Save events array to local storage
+        localStorage.setItem("event", JSON.stringify(events));
+    }else{
+        // Pull array from local storage
+        events = JSON.parse(localStorage.getItem("event"));
+        // get the text value inside of textarea
+        var str = txtEl.eq(index).val().trim();
+        // create object of event data and index 
+        eventData = {index:index, event:str};
+        // push eventData to events arrau
+        events.push(eventData);
+        // Save events array to local storage
+        localStorage.setItem("event", JSON.stringify(events));
+    }
     })
 })
-// get text from text area
-// var str = txtEl.eq().val()
-// console.log(str)
+
   
 // console.log(txtEl.eq(0).value)
 

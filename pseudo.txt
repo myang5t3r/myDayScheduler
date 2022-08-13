@@ -18,11 +18,17 @@ Each time block must be color-code to indicate whether it is past, present or fu
 Must be able to click on time block and enter text for event (Done)
 
 Save button for time-block must save the event to local storage so if you refresh page the items will persist
-    -use event handler for when button of time-block is pressed
-    -store items into array 
-    - use set localStorage.setItems / localStorage.getItems
-    -Must be JSON object use JSON.stringify and JSON.parse
+    - use Jquery to get the text from element in the textareas -  (Done)
+    - use Jquery to get button elements (Done)
+    -store items into array
+    -save to local storage 
+        - use set localStorage.setItems / localStorage.getItems
+        -Must be JSON object use JSON.stringify and JSON.parse
+    - after refresh stored items must be put back into correct spots
+        - pull from locate storage and put back into correct spot
 
 Make button pretty
+
+Add image to assets for readme file (Done)
     
     
