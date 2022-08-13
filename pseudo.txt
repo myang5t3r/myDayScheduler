@@ -1,7 +1,6 @@
 Use Jquery and Bootstrap to make a Work Day Scheduler
 
 Use given style.css and link to html with the given classes
-    -Need time-block still *****************************************
     -All other (Done)
 
 Create static html for each hour of the day (Done)
@@ -24,11 +23,14 @@ Save button for time-block must save the event to local storage so if you refres
     -save to local storage (Done)
         - use set localStorage.setItems / localStorage.getItems (Done)
         -Must be JSON object use JSON.stringify and JSON.parse (Done)
-    - after refresh stored items must be put back into correct spots
-        - pull from locate storage and put back into correct spot
+    - after refresh stored items must be put back into correct spots (Done)
+        - pull from locate storage and put back into correct spot (Done)
 
 Make button pretty
 
 Add image to assets for readme file (Done)
+
+readme dec
+
     
     

@@ -43,17 +43,11 @@ function persist(){
     if(localStorage.getItem("event")!==null){
         // get events array from local storage
         events = JSON.parse(localStorage.getItem("event"));
-        console.log(events)
-        // console.log(events[0].index)
-        // console.log(events[0].event)
         // Loop through events array 
         events.forEach(Element => {
-            console.log(Element.index)
             // set the textarea based on the index
             txtEl.eq(Element.index).text(Element.event)
         })
-        // put data back into correct textarea
-        // txtEl.eq(index).
     }else{
         return
     }
