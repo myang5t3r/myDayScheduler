@@ -10,16 +10,19 @@ Use Jquery to get header element to display the day and time (Done)
     -use callback function so it looks as a clock (Done)
     -use Date() method (Done)
 
-Each time block must be color-code to indicate whether it is past, present or future
-    -let try with unique id in each of the textareas, then use Date() function time to set the background color
-    -use bootstrap or Jquery to set background color
+Each time block must be color-code to indicate whether it is past, present or future (Done)
+    -Do not add it use element textarea, then use Date() function to get the time (Done)
+    -Use Jquery to get the element with eq() (Done)
+    -Loop though and set background  (Done)
 
-Must be able to click on time block and enter text for event
+Must be able to click on time block and enter text for event (Done)
 
 Save button for time-block must save the event to local storage so if you refresh page the items will persist
     -use event handler for when button of time-block is pressed
     -store items into array 
     - use set localStorage.setItems / localStorage.getItems
     -Must be JSON object use JSON.stringify and JSON.parse
+
+Make button pretty
     
     
